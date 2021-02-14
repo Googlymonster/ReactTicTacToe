@@ -1,54 +1,30 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import classNames from 'classnames'
 import Board from './Board';
 import Message from './Message';
-import Announcement from './Message';
+import Announcement from './Announcement';
 
 const Game = () => {
     const [squares, setSquares] = useState(Array(9).fill(null))
     const [xIsNext, setXIsNext] = useState(true);
-    // const [stepNumber, setStepNumber] = useState(0);
-    // const [history, setHistory] = useState([Array(9).fill(null)]);
     const [winner, setWinner] = useState("")
     const xO = xIsNext ? 'X' : 'O'
-
-    // const jumpTo = (step) => {
-    //     setStepNumber(step);
-    //     setXIsNext(step%2===0);
-    // }
 
     const handleClick = (i) => {
         const moves = [...squares];
         moves[i] = xO;
         setSquares(moves);
         setXIsNext(!xIsNext);
-        // const historyPoint = history.slice(0, stepNumber + 1);
-        // const current = historyPoint[stepNumber];
-        // const squares = [...current]
         const winner = calculateWinner(moves)
         if (winner) {
             setWinner(winner);
         }
-        // squares[i] = xO
-        // setHistory([...historyPoint, squares]);
-        // setXIsNext(!xIsNext);
-        // setStepNumber(historyPoint.length)
     }
 
-    // const renderMoves = () => 
-    //     history.map((_step, move) => {
-    //         const desc = move ? 'Go to #' + move : 'Start the Game';
-    //         return (
-    //             <li key={move}>
-    //             <button onClick={()=> {jumpTo(move)}}>
-    //                 {desc}
-    //             </button>
-    //             </li>
-    //         );
-    //     });
 
     const handleStart = () => {
         setSquares(Array(9).fill(null))
+        setXIsNext(true);
         setWinner(null)
     }
     
@@ -94,15 +70,5 @@ const calculateWinner = (squares) => {
     }
     return winner;
 
-
-
-    // for (let i = 0; i < lines.length; i++) {
-    //     const [a,b,c] = lines[i];
-    //     if (squares[a] && squares[a] === squares[b] && squares[b] === squares[c] ) {
-    //         return squares[a];
-    //     }
-    // }
-
-    // return null;
 } 
 

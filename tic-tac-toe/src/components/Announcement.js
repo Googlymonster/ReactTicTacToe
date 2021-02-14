@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Announcement = ({winner, onStart}) => {
     return (
@@ -11,8 +11,8 @@ const Announcement = ({winner, onStart}) => {
                     <h1>{winner}</h1>
                 </div>
             )}
-            <button className="Button" onClick={onStart}>
-                Start
+            <button type="button" className="Button" onClick={onStart}>
+                Restart
             </button>
         </div>
     )

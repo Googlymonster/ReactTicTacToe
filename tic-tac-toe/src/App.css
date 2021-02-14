@@ -1,155 +1,115 @@
 /* @import url("https//fonts.googleapis.com/css2?family=Roboto&display=swap"); */
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-  background-color: black;
-  color: white;
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 2rem;
+	background-color: black;
+	color: white;
+	font-family: "Roboto", sans-serif;
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 2rem;
 }
 
 h1 {
-  margin: 2rem;
+	margin: 2rem;
 }
 
 .board {
-  border: 1rem solid #ff652f;
-  background: #ff652f;
-  width: 500px;
-  height: 500px;
-  display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  gap: 1rem;
+	border: 1rem solid #0069ed;
+	border-radius: 5px;
+	background: #0069ed;
+	width: 500px;
+	height: 500px;
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+	gap: 1rem;
 }
 
 .squares {
-  background: #272727;
-  border: none;
-  font-size: 5rem;
-  cursor: pointer;
-  outline: none;
+	background: #272727;
+	border: none;
+	font-size: 5rem;
+	cursor: pointer;
+	outline: none;
 }
 
 .squares:focus {
-  position: relative;
+	position: relative;
 }
 
 .X {
-  color: red;
+	color: red;
 }
 
 .O {
-  color: green;
+	color: green;
 }
 
 .game-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-}
-
-.game-info h3 {
-  padding: 1rem;
-}
-
-.game-info li {
-  list-style: none;
-}
-
-.game-info button {
-  background: #272727;
-  color: white;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  margin: 0.5rem 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
 }
 
 .Announcement {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-size: 1.5rem;
-  text-align: center;
+	position: relative;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 1rem;
+	text-align: center;
+	color: white;
+	margin: 15px auto;
 }
 
 .Announcement h1 {
-  margin: 0.75rem 0;
+	margin: 0.75rem 0;
 }
 
 .Announcement div {
-  margin-bottom: 0.75rem;
+	margin-bottom: 0.75rem;
 }
 
 .Button {
-  display: inline-block;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem 0 0;
-  min-width: 5rem;
-  text-decoration: none;
-  background: #0069ed;
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  text-align: center;
-  transition: background 250ms ease-in-out, transform 150ms ease;
-}
-
-.Button:last-of-type {
-  margin-right: 0;
-}
-
-.Button:hover,
-:focus {
-  background: #0053ba;
-}
-
-.Button:focus {
-  outline: 1px solid #fff;
-  outline-offset: -4px;
-}
-
-.Button:active {
-  transform: scale(0.99);
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	min-width: 5rem;
+	text-decoration: none;
+	background: #0069ed;
+	color: #fff;
+	font-size: 1rem;
+	cursor: pointer;
+	text-align: center;
 }
 
 .Message {
-  text-align: center;
+	text-align: center;
 }
 
 .game-action {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .Game {
-  display: inline-block;
-  position: relative;
-  /* flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center; */
+	display: inline-block;
+	position: relative;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 .Game--winner:focus {
-  outline: none;
+	outline: none;
 }
